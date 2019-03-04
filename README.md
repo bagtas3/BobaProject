@@ -10,4 +10,5 @@ The code I started with was a 2012 presedential election map, and there is still
     - [bobaMilestone.html](examples/html/bobaMilestone.html)
     - [bobaMilestone.js](examples/js/bobaMilestone.js)
     
+As seen in the screenshot below, each state has a pie chart indicating which term respondants preferred. The pie charts are sized according to the # of respondants. The plug-in provided a event listener so a pop-up with the raw data  shows up when a pie chart is clicked. I am still looking into how to customize the pop-up.
   <img src="Milestone Screenshot.JPG">
