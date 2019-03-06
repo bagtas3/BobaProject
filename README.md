@@ -8,6 +8,7 @@ The code I started with was a 2012 presedential election map, and there is still
 
 + Code for my milestone map:
     - [bobaMilestone.html](examples/html/bobaMilestone.html)
+    - [bobaMilestone v2.html](examples/html/bobaMilestonev2.html)
     - [bobaMilestone.js](examples/js/bobaMilestone.js)
     
   <img src="Milestone Screenshot.JPG">
