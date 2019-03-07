@@ -145,7 +145,9 @@ $(document).ready(function() {
 			displayOptions: {
 				'Respondants': {
 					//https://github.com/humangeo/leaflet-dvf/wiki/5.-Utility-Functions
-					radius: new L.LinearFunction(new L.Point(0, 5), new L.Point(1018, 80)),
+					// radius: new L.LinearFunction(new L.Point(0, 10), new L.Point(1018, 60)),
+					// radius: new L.LinearFunction(new L.Point(1, 8), new L.Point(1018, 60)),
+					radius: new L.LinearFunction(new L.Point(1, 10), new L.Point(1018, 55)),
 					// barThickness: new L.LinearFunction(new L.Point(0, 4), new L.Point(1000, 80))
 				}
 			},
@@ -155,7 +157,8 @@ $(document).ready(function() {
 			},
 			onEachRecord: function (layer,record) {
 				var $html = $(L.HTMLUtils.buildTable(record));
-
+				// console.log($html)
+				//http://api.jquery.com/wrap/ docs on wrap()
 				layer.bindPopup($html.wrap('<div/>').parent().html(),{
 					minWidth: 400,
 					maxWidth: 400
