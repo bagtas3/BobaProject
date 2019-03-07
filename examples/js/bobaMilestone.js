@@ -144,7 +144,8 @@ $(document).ready(function() {
 			// results
 			displayOptions: {
 				'Respondants': {
-					radius: new L.LinearFunction(new L.Point(0, 10), new L.Point(1000, 100)),
+					//https://github.com/humangeo/leaflet-dvf/wiki/5.-Utility-Functions
+					radius: new L.LinearFunction(new L.Point(0, 5), new L.Point(1018, 80)),
 					// barThickness: new L.LinearFunction(new L.Point(0, 4), new L.Point(1000, 80))
 				}
 			},
