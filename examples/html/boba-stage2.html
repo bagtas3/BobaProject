@@ -60,7 +60,7 @@
     -->
     <script class="popup-template" type="x-tmpl-mustache">
       <div class="popup-div">
-        <h4 class="sidebar-state-header">{{State}}</h4>
+        <h4 class="sidebar-state-header">{{State}}: {{Respondants}} Respondents</h4>
         <div>Boba: {{Boba}} %</div>
 		<div>Boba Tea: {{Boba Tea}} %</div>	
 		<div>Bubble Tea: {{Bubble Tea}} %</div>
@@ -73,6 +73,7 @@
 
   <script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
   <script type="text/javascript" src="../lib/bootstrap/js/bootstrap.min.js"></script>
+  <!-- Load Leaflet library -->
   <script type="text/javascript" src="../js/leaflet.js"></script>
   <!-- Load Promises polyfill -->
    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
@@ -87,10 +88,14 @@
   <script type="text/javascript" src="../lib/jsts/jsts.js"></script>
   <script type="text/javascript" src="../lib/date.format.js"></script>
   <script type="text/javascript" src="../lib/geohash.js"></script>
+  <!-- Load data (json) -->
   <script src="../data/bobaData2.js"></script>
+  <!-- Load Human Geo DVF library -->
   <script type="text/javascript" src="../../dist/leaflet-dvf.js"></script>
   <script type="text/javascript" src="../../dist/data/stateData.min.js"></script>
+  <!-- Load Base tiles hosted on this repository -->
   <script type="text/javascript" src="../js/tile.stamen.js"></script>
+  <!-- Load our javascrip -->
   <script type="text/javascript" src="../js/boba-stage2.js"></script>
 </body>
 </html>

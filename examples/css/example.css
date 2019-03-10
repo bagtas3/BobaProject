@@ -14,11 +14,12 @@ html, body {
 }
 
 .sidebar-content {
-	background-color: red;
+	background-color: rgb(245, 245, 245);
+	border: gb(227, 227, 227);
 	border-radius:4px;
 	width: 246px;
- margin: 24.188px;
- display: inline-block;
+	margin: 24.188px;
+	display: inline-block;
     font-size: small;
 }
 
@@ -28,12 +29,9 @@ html, body {
 }
 
 .sidebar-state-header {
-		margin-bottom: 6px;
+	margin-bottom: 6px;
 }
 
-/* .h3 { */
-	/* margin-bottom: 0.8em; */
-/* } */
 
 .leaflet-control-layers label input {
 	margin-bottom: 2px;

@@ -155,7 +155,7 @@ $(document).ready(function() {
 				iconAnchor: new L.Point(-5,55)
 			},
 			
-			// // click each piechart: popup with a data in a table
+			// // click each piechart: popup with all data in a table
 			// onEachRecord: function (layer,record) {
 				// var $html = $(L.HTMLUtils.buildTable(record));
 				// console.log($html)
@@ -166,7 +166,7 @@ $(document).ready(function() {
 				// });
 			// }
 			
-	
+	// click on each piechart: only specified statistics show in side bar
 	  onEachRecord: function (layer,record) {
 		    var popupTemplate = document.querySelector('.popup-template').innerHTML;
 			layer.on('click', function () {
@@ -176,14 +176,26 @@ $(document).ready(function() {
 			  // Render the template with all of the properties. Mustache ignores properties
 			  // that aren't used in the template, so this is fine.
 			  var sidebarContentArea = document.querySelector('.sidebar-content');
-			  // var sidebarContentArea = document.querySelector('#legend.span3');
 			  console.log(sidebarContentArea);
 			  sidebarContentArea.innerHTML = Mustache.render(popupTemplate, record);
 			  
-			  // $('#legend'.span3).append(sidebarContentArea.innerHTML = Mustache.render(popupTemplate, record));
+			
 			  
 			});
       }
+	  // onEachRecord: function (layer,record) {
+		  // var popupTemplate = document.querySelector('.popup-template').innerHTML;
+			// // layer.on('click', function () {
+			  // // This function is called whenever a feature on the layer is clicked
+				// layer.bindPopup(
+					// // function () {
+						// // console.log(record);
+						// // return 
+						// Mustache.render(popupTemplate, record)
+						// // ;
+					// // }
+				// );
+		// }
 		};
 
 		var q1ResultsLayer = new L.PieChartDataLayer(data,q1Options);
