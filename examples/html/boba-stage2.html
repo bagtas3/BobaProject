@@ -58,7 +58,7 @@
     <!--
       This script element will not be displayed, it just holds our template
     -->
-    <script class="popup-template" type="x-tmpl-mustache">
+    <!-- <script class="popup-template" type="x-tmpl-mustache">
       <div class="popup-div">
         <h4 class="sidebar-state-header">{{State}}: {{Respondants}} Respondents</h4>
         <div>Boba: {{Boba}} %</div>
@@ -68,6 +68,43 @@
 		<div>Tapioca Milk Tea: {{Tapioca Milk Tea}} %</div>
 		<div>Other: {{Other}} %</div>
       </div>
+    </script> -->
+
+    <script class="popup-template" type="x-tmpl-mustache">
+    <!-- take styles from bootstrap css;starting line 2000 -->
+      <table class="table table-condensed table-striped table-bordered" style="width: 300px;">
+        <tr>
+          <th>State</th>
+          <td>{{State}}</td>
+          </tr>
+        <tr>
+          <th># Survey Respondents</th>
+          <td>{{Respondants}}</td>
+        <tr>
+          <th>Boba</th> 
+          <td>{{Boba}}%</td>
+        </tr>
+        <tr>
+          <th>Boba Tea</th>
+          <td>{{Boba Tea}}%</td> 
+        </tr>  
+        <tr>
+          <th>Bubble Tea</th>
+          <td>{{Bubble Tea}}%</td>
+        </tr>
+        <tr>
+          <th>Pearl Milk Tea</th>
+          <td>{{Pearl Milk Tea}}%</td>
+        </tr>  
+        <tr>
+          <th>Tapioca Milk Tea</th>
+          <td>{{Tapioca Milk Tea}}%</td>
+        </tr>
+        <tr>
+          <th>Other</th>
+          <td>{{Other}}%</td>
+        </tr>  
+      </table>
     </script>
   
 

@@ -165,26 +165,33 @@ $(document).ready(function() {
 					// maxWidth: 400
 				// });
 			// }
-			
-	// click on each piechart: only specified statistics show in side bar
-	  onEachRecord: function (layer,record) {
-		    var popupTemplate = document.querySelector('.popup-template').innerHTML;
-			layer.on('click', function () {
-			  // This function is called whenever a feature on the layer is clicked
-			  console.log(record);
 
-			  // Render the template with all of the properties. Mustache ignores properties
-			  // that aren't used in the template, so this is fine.
-			  var sidebarContentArea = document.querySelector('.sidebar-content');
-			  console.log(sidebarContentArea);
-			  sidebarContentArea.innerHTML = Mustache.render(popupTemplate, record);
+			// click each piechart: popup with select data in a table
+			onEachRecord: function (layer,record) {
+				var popupTemplate = document.querySelector('.popup-template').innerHTML;
+				layer.bindPopup(Mustache.render(popupTemplate, record));
+			}
+			
+	// // click on each piechart: only specified statistics show in side bar
+	//   onEachRecord: function (layer,record) {
+	// 	    var popupTemplate = document.querySelector('.popup-template').innerHTML;
+	// 		layer.on('click', function () {
+	// 		  // This function is called whenever a feature on the layer is clicked
+	// 		  console.log(record);
+
+	// 		  // Render the template with all of the properties. Mustache ignores properties
+	// 		  // that aren't used in the template, so this is fine.
+	// 		  var sidebarContentArea = document.querySelector('.sidebar-content');
+	// 		  console.log(sidebarContentArea);
+	// 		  sidebarContentArea.innerHTML = Mustache.render(popupTemplate, record);
 			  
 			
 			  
-			});
-      }
+	// 		});
+ //      }
 	  // onEachRecord: function (layer,record) {
 		  // var popupTemplate = document.querySelector('.popup-template').innerHTML;
+		  // potentially delete the layer.on bc layer.bindpopup is it's own event listener. don't need 2
 			// // layer.on('click', function () {
 			  // // This function is called whenever a feature on the layer is clicked
 				// layer.bindPopup(
