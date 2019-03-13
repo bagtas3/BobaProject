@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <!-- Le styles -->
+    <!-- styles -->
     <link href="../lib/bootstrap/css/bootstrap.css" rel="stylesheet">
     <style>
       body {
@@ -72,16 +72,18 @@
 
     <script class="popup-template" type="x-tmpl-mustache">
     <!-- take styles from bootstrap css;starting line 2000 -->
-      <table class="table table-condensed table-striped table-bordered" style="width: 300px;">
+      <table class="table table-condensed table-striped table-bordered" style="width: 250px;">
         <tr>
           <th>State</th>
-          <td>{{State}}</td>
+          <td>{{State}}    </td>
           </tr>
         <tr>
           <th># Survey Respondents</th>
           <td>{{Respondants}}</td>
         <tr>
-          <th>Boba</th> 
+      </table>
+      <table class="table table-condensed table-striped table-bordered" style="width: 250px;">
+	  <th>Boba</th> 
           <td>{{Boba}}%</td>
         </tr>
         <tr>
@@ -113,13 +115,13 @@
   <!-- Load Leaflet library -->
   <script type="text/javascript" src="../js/leaflet.js"></script>
   <!-- Load Promises polyfill -->
-   <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
     
 <!-- Load Fetch polyfill -->
-<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.4/fetch.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.4/fetch.js"></script>
 
 <!-- import the Mustache library -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.0/mustache.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.0/mustache.min.js"></script>
 
   <script type="text/javascript" src="../lib/jsts/javascript.util.js"></script>
   <script type="text/javascript" src="../lib/jsts/jsts.js"></script>

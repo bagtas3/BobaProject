@@ -145,9 +145,9 @@ $(document).ready(function() {
 			// results
 			displayOptions: {
 				'Respondants': {
-					//https://github.com/humangeo/leaflet-dvf/wiki/5.-Utility-Functions
+					//documentation: https://github.com/humangeo/leaflet-dvf/wiki/5.-Utility-Functions
 					radius: new L.LinearFunction(new L.Point(1, 10), new L.Point(1018, 55)),
-					// barThickness: new L.LinearFunction(new L.Point(0, 4), new L.Point(1000, 80))
+					
 				}
 			},
 			tooltipOptions: {
@@ -155,7 +155,7 @@ $(document).ready(function() {
 				iconAnchor: new L.Point(-5,55)
 			},
 			
-			// // click each piechart: popup with all data in a table
+			// // click each piechart: popup with ALL data in a table
 			// onEachRecord: function (layer,record) {
 				// var $html = $(L.HTMLUtils.buildTable(record));
 				// console.log($html)
@@ -170,9 +170,13 @@ $(document).ready(function() {
 			onEachRecord: function (layer,record) {
 				var popupTemplate = document.querySelector('.popup-template').innerHTML;
 				layer.bindPopup(Mustache.render(popupTemplate, record));
+				layer.on('click', function () {
+					console.log(record);
+				});
+			
 			}
 			
-	// // click on each piechart: only specified statistics show in side bar
+	// // click on each piechart: data shows in side bar
 	//   onEachRecord: function (layer,record) {
 	// 	    var popupTemplate = document.querySelector('.popup-template').innerHTML;
 	// 		layer.on('click', function () {
@@ -189,21 +193,8 @@ $(document).ready(function() {
 			  
 	// 		});
  //      }
-	  // onEachRecord: function (layer,record) {
-		  // var popupTemplate = document.querySelector('.popup-template').innerHTML;
-		  // potentially delete the layer.on bc layer.bindpopup is it's own event listener. don't need 2
-			// // layer.on('click', function () {
-			  // // This function is called whenever a feature on the layer is clicked
-				// layer.bindPopup(
-					// // function () {
-						// // console.log(record);
-						// // return 
-						// Mustache.render(popupTemplate, record)
-						// // ;
-					// // }
-				// );
-		// }
-		};
+
+	};
 
 		var q1ResultsLayer = new L.PieChartDataLayer(data,q1Options);
 
@@ -218,33 +209,6 @@ $(document).ready(function() {
 		
 	};
 	
-	// Loading local data for now, since HuffPo's API seems to be broken from a jQuery/JSONP
-	// standpoint
 	loadData(bobaData2);
 
-	
-	// Huffington Post updated their Pollster API, and JSONP doesn't seem to work correctly
-	// Commented out for now
-	/*
-	$.ajax({
-		url: 'http://elections.huffingtonpost.com/pollster/api/charts.jsonp',
-		data: {
-			callback: 'pollsterCallback',
-			topic: '2012-president'
-		},
-		type: 'GET',
-		jsonpCallback: 'pollsterCallback',
-		cache: true,
-		async: false,
-		crossDomain: true,
-		dataType: 'jsonp',
-		error: function (jqXHR, textStatus, errorThrown) {
-			console.log('Error');
-			console.log(jqXHR.responseText);
-		},
-		success: function (data, textStatus, jqXHR) {
-			loadData(data);
-		}
-	});
-	*/
 });
