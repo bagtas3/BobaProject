@@ -176,23 +176,23 @@ $(document).ready(function() {
 			
 			}
 			
-	// // click on each piechart: data shows in side bar
-	//   onEachRecord: function (layer,record) {
-	// 	    var popupTemplate = document.querySelector('.popup-template').innerHTML;
-	// 		layer.on('click', function () {
-	// 		  // This function is called whenever a feature on the layer is clicked
-	// 		  console.log(record);
+	// click on each piechart: data shows in side bar
+	  		onEachRecord: function (layer,record) {
+			    var popupTemplate = document.querySelector('.popup-template').innerHTML;
+				layer.on('mouseover', function () {
+				  // This function is called whenever a feature on the layer is clicked
+				  console.log(record);
 
-	// 		  // Render the template with all of the properties. Mustache ignores properties
-	// 		  // that aren't used in the template, so this is fine.
-	// 		  var sidebarContentArea = document.querySelector('.sidebar-content');
-	// 		  console.log(sidebarContentArea);
-	// 		  sidebarContentArea.innerHTML = Mustache.render(popupTemplate, record);
-			  
-			
-			  
-	// 		});
- //      }
+				  // Render the template with all of the properties. Mustache ignores properties
+				  // that aren't used in the template, so this is fine.
+				  var sidebarContentArea = document.querySelector('.sidebar-content');
+				  console.log(sidebarContentArea);
+				  sidebarContentArea.innerHTML = Mustache.render(popupTemplate, record);
+				  
+				
+				  
+				});
+	     	}
 
 	};
 
