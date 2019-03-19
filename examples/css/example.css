@@ -5,7 +5,8 @@ html, body {
 }
 
 #map {
-	height: 800px;
+	/*height: 800px;*/
+	height: 600px;
 }
 
 #legend {
@@ -13,7 +14,7 @@ html, body {
 	overflow: auto;
 }
 
-.sidebar-content {
+.#legend.sidebar {
 	background-color: rgb(245, 245, 245);
 	border: gb(227, 227, 227);
 	border-radius:4px;
