@@ -146,7 +146,7 @@ $(document).ready(function() {
 			displayOptions: {
 				'Respondants': {
 					//documentation: https://github.com/humangeo/leaflet-dvf/wiki/5.-Utility-Functions
-					radius: new L.LinearFunction(new L.Point(1, 10), new L.Point(1018, 55)),
+					radius: new L.LinearFunction(new L.Point(1, 10), new L.Point(1018, 60)),
 					
 				}
 			},
