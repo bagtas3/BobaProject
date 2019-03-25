@@ -1,0 +1,48 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#map {
+	/*height: 600px;*/
+	height: 100%;
+}
+
+#legend {
+	height: 100%;
+	overflow: auto;
+}
+
+.#legend.sidebar {
+	background-color: rgb(245, 245, 245);
+	border: gb(227, 227, 227);
+	border-radius:4px;
+	width: 246px;
+	margin: 24.188px;
+	display: inline-block;
+        font-size: small;
+}
+
+
+.popup-div {
+	margin:20px;
+	width: 246px;
+}
+
+.sidebar-state-header {
+	margin-bottom: 6px;
+}
+
+
+.leaflet-control-layers label input {
+	margin-bottom: 2px;
+}
+.leaflet-control-layers label span {
+	vertical-align: text-top;
+}
+
+.leaflet-popup-content {
+	overflow: auto;
+	max-height: 300px;
+}
