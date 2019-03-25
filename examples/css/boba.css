@@ -30,11 +30,6 @@ html, body {
 	width: 246px;
 }
 
-.sidebar-state-header {
-	margin-bottom: 6px;
-}
-
-
 .leaflet-control-layers label input {
 	margin-bottom: 2px;
 }
