@@ -146,7 +146,7 @@ $(document).ready(function() {
 			displayOptions: {
 				'Respondants': {
 					//documentation: https://github.com/humangeo/leaflet-dvf/wiki/5.-Utility-Functions
-					radius: new L.LinearFunction(new L.Point(1, 10), new L.Point(1018, 60)),
+					radius: new L.LinearFunction(new L.Point(1, 10), new L.Point(1018, 55)),
 					
 				}
 			},
@@ -170,29 +170,35 @@ $(document).ready(function() {
 			onEachRecord: function (layer,record) {
 				var popupTemplate = document.querySelector('.popup-template').innerHTML;
 				layer.bindPopup(Mustache.render(popupTemplate, record));
+				// layer.on('click', function () {
+				// 	console.log(record);
+				// });
 				layer.on('click', function () {
-					console.log(record);
+				  // This function is called whenever a feature on the layer is clicked
+				  console.log(record);
 				});
 			
-			}
+			},
 			
 	// // click on each piechart: data shows in side bar
-	//   		onEachRecord: function (layer,record) {
-	// 		    var popupTemplate2 = document.querySelector('.mouse-popup-template').innerHTML;
-	// 			layer.on('mouseover', function () {
-	// 			  // This function is called whenever a feature on the layer is clicked
-	// 			  console.log(record);
+	  	// 	onEachRecord: function (layer,record) {
+			 //    var popupTemplate2 = document.querySelector('.mouse-popup-template').innerHTML;
+				// layer.on('click', function () {
+				//   // This function is called whenever a feature on the layer is clicked
+				 
+				//   console.log(record);
 
-	// 			  // Render the template with all of the properties. Mustache ignores properties
-	// 			  // that aren't used in the template, so this is fine.
-	// 			  var sidebarContentArea = document.querySelector('.sidebar-content');
-	// 			  console.log(sidebarContentArea);
-	// 			  sidebarContentArea.innerHTML = Mustache.render(popupTemplate2, record);
+				//   // Render the template with all of the properties. Mustache ignores properties
+				//   // that aren't used in the template, so this is fine.
+				//   var sidebarContentArea = document.querySelector('#.sidebar');
+
+				//   console.log(sidebarContentArea);
+				//   sidebarContentArea.innerHTML = Mustache.render(popupTemplate2, record);
 				  
-				
 				  
-	// 			});
-	//      	}
+				  
+				// });
+	   //   	}
 
 	};
 
