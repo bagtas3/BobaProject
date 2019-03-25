@@ -5,8 +5,8 @@ html, body {
 }
 
 #map {
-	/*height: 600px;*/
-	height: 1000;
+	/*height: 800px;*/
+	height: 900px;
 }
 
 #legend {
@@ -29,6 +29,11 @@ html, body {
 	margin:20px;
 	width: 246px;
 }
+
+.sidebar-state-header {
+	margin-bottom: 6px;
+}
+
 
 .leaflet-control-layers label input {
 	margin-bottom: 2px;
